@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D9224062371808300BA1763 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9224052371808300BA1763 /* ExperienceViewController.swift */; };
 		8DEC7724236AE38000EADD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7723236AE38000EADD14 /* AppDelegate.swift */; };
 		8DEC7726236AE38000EADD14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7725236AE38000EADD14 /* SceneDelegate.swift */; };
 		8DEC7728236AE38000EADD14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7727236AE38000EADD14 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D9224052371808300BA1763 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		8DEC7720236AE38000EADD14 /* cvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEC7723236AE38000EADD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEC7725236AE38000EADD14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				8DEC772E236AE38200EADD14 /* LaunchScreen.storyboard */,
 				8DEC7731236AE38200EADD14 /* Info.plist */,
 				8DEC7753236AE45F00EADD14 /* CVViewController.swift */,
+				8D9224052371808300BA1763 /* ExperienceViewController.swift */,
 			);
 			path = cvApp;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				8DEC7728236AE38000EADD14 /* ViewController.swift in Sources */,
 				8DEC7754236AE45F00EADD14 /* CVViewController.swift in Sources */,
+				8D9224062371808300BA1763 /* ExperienceViewController.swift in Sources */,
 				8DEC7724236AE38000EADD14 /* AppDelegate.swift in Sources */,
 				8DEC7726236AE38000EADD14 /* SceneDelegate.swift in Sources */,
 			);
