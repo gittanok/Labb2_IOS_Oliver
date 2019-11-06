@@ -17,6 +17,8 @@
 		8DEC773B236AE38200EADD14 /* cvAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC773A236AE38200EADD14 /* cvAppTests.swift */; };
 		8DEC7746236AE38200EADD14 /* cvAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7745236AE38200EADD14 /* cvAppUITests.swift */; };
 		8DEC7754236AE45F00EADD14 /* CVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7753236AE45F00EADD14 /* CVViewController.swift */; };
+		8DFB548B2372F24B0015B2A7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB548A2372F24B0015B2A7 /* TableViewCell.swift */; };
+		8DFB548D2372F6550015B2A7 /* workCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFB548C2372F6550015B2A7 /* workCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		8DEC7745236AE38200EADD14 /* cvAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cvAppUITests.swift; sourceTree = "<group>"; };
 		8DEC7747236AE38200EADD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DEC7753236AE45F00EADD14 /* CVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVViewController.swift; sourceTree = "<group>"; };
+		8DFB548A2372F24B0015B2A7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8DFB548C2372F6550015B2A7 /* workCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				8DEC7731236AE38200EADD14 /* Info.plist */,
 				8DEC7753236AE45F00EADD14 /* CVViewController.swift */,
 				8D9224052371808300BA1763 /* ExperienceViewController.swift */,
+				8DFB548A2372F24B0015B2A7 /* TableViewCell.swift */,
+				8DFB548C2372F6550015B2A7 /* workCell.swift */,
 			);
 			path = cvApp;
 			sourceTree = "<group>";
@@ -267,7 +273,9 @@
 			files = (
 				8DEC7728236AE38000EADD14 /* ViewController.swift in Sources */,
 				8DEC7754236AE45F00EADD14 /* CVViewController.swift in Sources */,
+				8DFB548D2372F6550015B2A7 /* workCell.swift in Sources */,
 				8D9224062371808300BA1763 /* ExperienceViewController.swift in Sources */,
+				8DFB548B2372F24B0015B2A7 /* TableViewCell.swift in Sources */,
 				8DEC7724236AE38000EADD14 /* AppDelegate.swift in Sources */,
 				8DEC7726236AE38000EADD14 /* SceneDelegate.swift in Sources */,
 			);
