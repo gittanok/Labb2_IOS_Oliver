@@ -24,4 +24,24 @@ class TableViewCell: UITableViewCell {
         workName.text = work.workTitle
         workDate.text = work.date
     }
+    func setEducation(education: education){
+        workImage.image = education.educationPicture
+        workName.text = education.educationTitle
+        workDate.text = education.educationDate
+    }
+        
+    
+    
 }
+//class education {
+  //  var educationPicture: UIImage?
+    //var educationTitle: String
+    //var educationDate: String
+    
+    //init(educationPicture: UIImage, educationTitle: String, educationDate: String){
+      //  self.educationPicture = educationPicture
+        //self.educationTitle = educationTitle
+        //self.educationDate = educationDate
+   
+
+

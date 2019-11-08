@@ -12,12 +12,13 @@ class ExperienceViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     var works: [work] = []
+    var educations: [education] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        works = createArray()
-        
+        works = createArrayWork()
+        educations = createArrayEducation()
     }
-    func createArray() -> [work] {
+    func createArrayWork() -> [work] {
         
         var tempWorkCells: [work] = []
         
@@ -31,7 +32,27 @@ class ExperienceViewController: UIViewController {
         
         return tempWorkCells
     }
-    
+    func createArrayEducation() -> [education] {
+        
+        var tempEducationCells: [education] = []
+        let education1 = education(educationPicture: UIImage(named:"1")!, educationTitle: "Education 1", educationDate: "2000")
+        tempEducationCells.append(education1)
+        return tempEducationCells
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        if(section == 0){
+            label.text = "Work"
+        }
+        else{
+            label.text = "Education"
+        }
+        label.backgroundColor = UIColor.lightGray
+        return label
+    }
 
    
 
@@ -40,13 +61,25 @@ class ExperienceViewController: UIViewController {
 extension ExperienceViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return works.count
+        if(section == 0){
+            return works.count
+        }else{
+            return educations.count
+        }
+        
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let Work = works[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-        cell.setWork(work: Work)
+        if(indexPath.section == 0){
+            let Work = works[indexPath.row]
+            
+            cell.setWork(work: Work)
+        }
+        else{
+            let Education = educations[indexPath.row]
+            
+            cell.setEducation(education: Education)
+        }
         
         return cell
     }

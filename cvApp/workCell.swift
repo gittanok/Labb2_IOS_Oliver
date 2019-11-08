@@ -21,3 +21,15 @@ class work {
         self.date = date
     }
 }
+
+class education {
+    var educationPicture: UIImage?
+    var educationTitle: String
+    var educationDate: String
+    
+    init(educationPicture: UIImage, educationTitle: String, educationDate: String){
+        self.educationPicture = educationPicture
+        self.educationTitle = educationTitle
+        self.educationDate = educationDate
+    }
+}
