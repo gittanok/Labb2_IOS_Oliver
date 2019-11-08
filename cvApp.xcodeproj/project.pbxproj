@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D57A00523757C2000BD1E4E /* ExperiencedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D57A00423757C2000BD1E4E /* ExperiencedDetailViewController.swift */; };
 		8D9224062371808300BA1763 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9224052371808300BA1763 /* ExperienceViewController.swift */; };
 		8DEC7724236AE38000EADD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7723236AE38000EADD14 /* AppDelegate.swift */; };
 		8DEC7726236AE38000EADD14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC7725236AE38000EADD14 /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D57A00423757C2000BD1E4E /* ExperiencedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperiencedDetailViewController.swift; sourceTree = "<group>"; };
 		8D9224052371808300BA1763 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		8DEC7720236AE38000EADD14 /* cvApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cvApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEC7723236AE38000EADD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				8D9224052371808300BA1763 /* ExperienceViewController.swift */,
 				8DFB548A2372F24B0015B2A7 /* TableViewCell.swift */,
 				8DFB548C2372F6550015B2A7 /* workCell.swift */,
+				8D57A00423757C2000BD1E4E /* ExperiencedDetailViewController.swift */,
 			);
 			path = cvApp;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				8D9224062371808300BA1763 /* ExperienceViewController.swift in Sources */,
 				8DFB548B2372F24B0015B2A7 /* TableViewCell.swift in Sources */,
 				8DEC7724236AE38000EADD14 /* AppDelegate.swift in Sources */,
+				8D57A00523757C2000BD1E4E /* ExperiencedDetailViewController.swift in Sources */,
 				8DEC7726236AE38000EADD14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

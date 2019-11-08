@@ -53,6 +53,14 @@ class ExperienceViewController: UIViewController {
         label.backgroundColor = UIColor.lightGray
         return label
     }
+    
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "experienceShow" {
+            let destVC  = segue.destination as! ExperiencedDetailViewController
+            destVC.work = sender as? work
+            
+        }
+    }
 
    
 
@@ -82,6 +90,11 @@ extension ExperienceViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // fix for education
+        let Work = works[indexPath.row]
+        performSegue(withIdentifier: "experienceShow", sender: Work)
     }
 }
 
