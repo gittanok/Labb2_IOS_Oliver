@@ -20,16 +20,30 @@ class ExperiencedDetailViewController: UIViewController {
     @IBOutlet weak var UILabelDescription: UILabel!
     
     var work: work?
-    
+    var education: education?
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        if work != nil{
+            setWorkUI()
+        }
+        else{
+            setEducationUI()
+        }
+        
         
     }
-    func setUI() {
+    func setWorkUI() {
         UIImagePicture.image = work?.image
         UILabelTitle.text = work?.workTitle
         UILabelDate.text = work?.date
+        UILabelDescription.text = work?.description
+    }
+    func setEducationUI(){
+        UIImagePicture.image = education?.educationPicture
+        UILabelTitle.text = education?.educationTitle
+        UILabelDate.text = education?.educationDate
+        UILabelDescription.text = education?.educationDescription
+        
     }
     
 

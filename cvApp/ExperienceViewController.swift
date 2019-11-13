@@ -22,9 +22,9 @@ class ExperienceViewController: UIViewController {
         
         var tempWorkCells: [work] = []
         
-        let work1 = work(image: UIImage(named:"1")!, workTitle: "work 1", date: "2005")
-        let work2 = work(image: UIImage(named:"2")!, workTitle: "work 2", date: "2006")
-        let work3 = work(image: UIImage(named:"3")!, workTitle: "work 3", date: "2007")
+        let work1 = work(image: UIImage(named:"1")!, workTitle: "work 1", date: "2005", description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
+        let work2 = work(image: UIImage(named:"2")!, workTitle: "work 2", date: "2006",description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
+        let work3 = work(image: UIImage(named:"3")!, workTitle: "work 3", date: "2007",description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
         
         tempWorkCells.append(work1)
         tempWorkCells.append(work2)
@@ -35,7 +35,7 @@ class ExperienceViewController: UIViewController {
     func createArrayEducation() -> [education] {
         
         var tempEducationCells: [education] = []
-        let education1 = education(educationPicture: UIImage(named:"1")!, educationTitle: "Education 1", educationDate: "2000")
+        let education1 = education(educationPicture: UIImage(named:"1")!, educationTitle: "Education 1", educationDate: "2000", educationDescription: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum")
         tempEducationCells.append(education1)
         return tempEducationCells
     }
@@ -55,11 +55,16 @@ class ExperienceViewController: UIViewController {
     }
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "experienceShow" {
-            let destVC  = segue.destination as! ExperiencedDetailViewController
-            destVC.work = sender as? work
-            
+        if let destVC  = segue.destination as? ExperiencedDetailViewController {
+            if let work = sender as? work{
+                destVC.work = work
+            }
+            else if let Education = sender as? education{
+                destVC.education = Education
+            }
+                    
         }
+        
     }
 
    
@@ -93,8 +98,17 @@ extension ExperienceViewController: UITableViewDataSource, UITableViewDelegate{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // fix for education
-        let Work = works[indexPath.row]
-        performSegue(withIdentifier: "experienceShow", sender: Work)
+        if(indexPath.section == 0 ){
+            let Work = works[indexPath.row]
+            performSegue(withIdentifier: "experienceShow", sender: Work)
+        }
+        else{
+            let Education = educations[indexPath.row]
+            performSegue(withIdentifier: "experienceShow", sender: Education)
+        }
+        
+        
+        
     }
 }
 
